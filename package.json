@@ -1,0 +1,14 @@
+{
+  "name": "localstore",
+  "version": "0.0.1",
+  "description": "本地存储体系",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "本地存储"
+  ],
+  "author": "jero",
+  "license": "ISC"
+}

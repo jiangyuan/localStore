@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localStore</title>
+</head>
+<body>
+    <script>
+    var data = [
+        {
+            cid: 30001,
+            name: '课1',
+            price: 10000,
+            wafaha: '挖法哈'
+        },
+        {
+            cid: 30002,
+            name: '课2',
+            price: 10000,
+            wafaha: '挖法哈'
+        },
+        {
+            cid: 30003,
+            name: '课3',
+            price: 10000,
+            wafaha: '挖法哈'
+        }
+    ];
+    </script>
+    <script src="http://7.url.cn/edu/jslib/comb/es5-modjs-jquery-badjs-v1.5.js"></script>
+    <script src="./localStore.js"></script>
+    <script>
+    localStore.set('prefix@', 'cid', data, ['price', 'name']);
+    console.log('1', localStore.get('prefix@', [30001, 30002, 30003]));
+
+
+    localStore.set('prefix2@', 'cid', data, ['price', 'wafaha']);
+    console.log('2', localStore.get('prefix2@', [30001, 30002, 30003]));
+
+
+    localStore.set('prefix2@', 'cid', data, ['price', 'wafaha']);
+    console.log('3', localStore.get('prefix2@', [30001, 30002]));
+
+
+    localStore.set('prefix2@', 'cid', data, ['price', 'wafaha']);
+    console.log('4', localStore.get('prefix2@', [30001, 30002, 30003, 30004]));
+    </script>
+</body>
+</html>
